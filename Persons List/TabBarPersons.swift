@@ -9,7 +9,7 @@ import UIKit
 
 class TabBarPersons: UITabBarController {
 
-    private let person = Person.getPerson()
+    private let person = Person.getPersons()
     
     
     
