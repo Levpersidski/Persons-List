@@ -13,6 +13,9 @@ struct Person {
     var phoneNumber: String
     var email: String
     
+    var fullName: String {
+       "\(name) \(surname)"
+    }
     
     static func getPersons() -> [Person] {
         let data = DataManager()

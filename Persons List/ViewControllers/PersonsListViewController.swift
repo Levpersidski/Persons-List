@@ -11,11 +11,12 @@ class PersonsListViewController: UITableViewController {
 
     
     
-    var person:[Person]!
+    var personList:[Person]!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -32,16 +33,18 @@ class PersonsListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        personList.count
+        
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Personslist", for: indexPath)
-
-        // Configure the cell...
-
+        var content = cell.defaultContentConfiguration()
+        let person = personList [indexPath.row]
+        
+        content.text = person.fullName
+        cell.contentConfiguration = content
         return cell
     }
 

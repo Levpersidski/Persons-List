@@ -17,24 +17,25 @@ class PersonsTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     
-        
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            guard let tabBarController = segue.destination as? UITabBarController else {return}
-            guard let viewControllers = tabBarController.viewControllers else {return}
-            
-            for viewController in viewControllers {
-                if let navigationVC = viewController as? UINavigationController {
-                    if let personsListVC = navigationVC.topViewController as? PersonsListViewController {
-                    personsListVC.person = person }
-                
-                    else if let fullPersonsListVC = navigationVC.topViewController as? FullPersonsListViewController {
-                        fullPersonsListVC.person = person
+        sendPersonList()
+       
                     }
-                
+    
+    
+    func sendPersonList() {
+        guard let viewControllers = viewControllers else {return}
+        
+        for viewController in viewControllers {
+            if let navigationVC = viewController as? UINavigationController {
+                if let personsListVC = navigationVC.topViewController as? PersonsListViewController {
+                personsListVC.personList = person }
+            
+                else if let fullPersonsListVC = navigationVC.topViewController as? FullPersonsListViewController {
+                    fullPersonsListVC.person = person
                 
                 
             }
+                
     }
     
 
