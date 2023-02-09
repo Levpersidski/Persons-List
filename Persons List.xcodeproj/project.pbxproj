@@ -17,6 +17,7 @@
 		B6B20D082992D87100E0A128 /* PersonsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B20D072992D87100E0A128 /* PersonsTabBarController.swift */; };
 		B6B20D0A2992DB4000E0A128 /* PersonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B20D092992DB4000E0A128 /* PersonsListViewController.swift */; };
 		B6B20D0C2992DBA300E0A128 /* FullPersonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B20D0B2992DBA300E0A128 /* FullPersonsListViewController.swift */; };
+		B6B20D102995786400E0A128 /* ContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B20D0F2995786400E0A128 /* ContactInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B6B20D072992D87100E0A128 /* PersonsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsTabBarController.swift; sourceTree = "<group>"; };
 		B6B20D092992DB4000E0A128 /* PersonsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListViewController.swift; sourceTree = "<group>"; };
 		B6B20D0B2992DBA300E0A128 /* FullPersonsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPersonsListViewController.swift; sourceTree = "<group>"; };
+		B6B20D0F2995786400E0A128 /* ContactInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				B6B20D072992D87100E0A128 /* PersonsTabBarController.swift */,
 				B6B20D092992DB4000E0A128 /* PersonsListViewController.swift */,
 				B6B20D0B2992DBA300E0A128 /* FullPersonsListViewController.swift */,
+				B6B20D0F2995786400E0A128 /* ContactInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6A96859299186B4001C2463 /* AppDelegate.swift in Sources */,
+				B6B20D102995786400E0A128 /* ContactInfoViewController.swift in Sources */,
 				B6B20D0A2992DB4000E0A128 /* PersonsListViewController.swift in Sources */,
 				B6A9686E299187CA001C2463 /* Person.swift in Sources */,
 				B6B20D0C2992DBA300E0A128 /* FullPersonsListViewController.swift in Sources */,

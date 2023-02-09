@@ -40,6 +40,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="57W-5c-FeW" kind="show" id="uJj-2h-J01"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -53,20 +56,50 @@
             </objects>
             <point key="canvasLocation" x="3" y="658"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact Info View Controller-->
         <scene sceneID="gCo-1R-Rh5">
             <objects>
-                <viewController id="57W-5c-FeW" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="57W-5c-FeW" customClass="ContactInfoViewController" customModule="Persons_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WjP-Ch-9Rs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="dRP-FQ-mNl">
+                                <rect key="frame" x="20" y="160" width="69" height="89"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP3-Nu-oBO">
+                                        <rect key="frame" x="0.0" y="0.0" width="69" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNt-jN-qUt">
+                                        <rect key="frame" x="0.0" y="54" width="69" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="M79-GB-0ZV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dRP-FQ-mNl" firstAttribute="leading" secondItem="M79-GB-0ZV" secondAttribute="leading" constant="20" id="3uM-VX-SX2"/>
+                            <constraint firstItem="dRP-FQ-mNl" firstAttribute="top" secondItem="M79-GB-0ZV" secondAttribute="top" constant="20" id="sio-Sa-3qa"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Pr4-v6-7kj">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="LHV-XR-ZAw"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailLabel" destination="MNt-jN-qUt" id="DIB-bh-7Ga"/>
+                        <outlet property="phoneNumberLable" destination="lP3-Nu-oBO" id="Ybo-T0-wfv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFT-pe-iye" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3" y="1315"/>
+            <point key="canvasLocation" x="3" y="1377"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vxH-eb-SXo">

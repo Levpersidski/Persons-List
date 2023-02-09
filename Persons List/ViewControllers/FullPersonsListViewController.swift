@@ -14,11 +14,8 @@ class FullPersonsListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 50        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.rowHeight = 50
+        
     }
 
     // MARK: - Table view data source
@@ -37,16 +34,18 @@ class FullPersonsListViewController: UITableViewController {
         let section = self.personList[section]
         return section.fullName
     }
+    
+   
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FullList", for: indexPath)
-
+        
         var content = cell.defaultContentConfiguration()
-        let person = personList [indexPath.row]
+        let person = personList [indexPath.section]
         if indexPath.row == 0 {
             content.text = person.phoneNumber
-        } else if indexPath.section == 1  {
+        } else if indexPath.row == 1  {
                 content.text = person.email
             }
     
@@ -56,6 +55,13 @@ class FullPersonsListViewController: UITableViewController {
 
     }
     
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    
+        view.tintColor = .green.withAlphaComponent(0.3)
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = .purple.withAlphaComponent(0.5)
+    }
+}
 
     /*
     // Override to support conditional editing of the table view.
@@ -101,5 +107,3 @@ class FullPersonsListViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-}
