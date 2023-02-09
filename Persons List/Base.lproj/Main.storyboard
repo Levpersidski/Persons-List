@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="792" y="-37"/>
         </scene>
-        <!--Tab Bar Persons-->
+        <!--Persons Tab Bar Controller-->
         <scene sceneID="vk1-ZW-ilT">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5Qh-KI-Xpi" customClass="TabBarPersons" customModule="Persons_List" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5Qh-KI-Xpi" customClass="PersonsTabBarController" customModule="Persons_List" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q6C-Eq-Qst">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

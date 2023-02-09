@@ -1,5 +1,5 @@
 //
-//  TabBarPersons.swift
+//  PersonsTabBarController.swift
 //  Persons List
 //
 //  Created by Роман Бакаев on 07.02.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TabBarPersons: UITabBarController {
+class PersonsTabBarController: UITabBarController {
 
     private let person = Person.getPersons()
     
