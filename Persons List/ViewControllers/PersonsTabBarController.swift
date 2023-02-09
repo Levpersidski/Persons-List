@@ -11,7 +11,7 @@ class PersonsTabBarController: UITabBarController {
 
     private let person = Person.getPersons()
 
-    
+   
     
     
     override func viewDidLoad() {
@@ -24,8 +24,13 @@ class PersonsTabBarController: UITabBarController {
             guard let viewControllers = tabBarController.viewControllers else {return}
             
             for viewController in viewControllers {
-                if let personsListVC = viewController as? PersonsListViewController {
-                    personsListVC.person = person
+                if let navigationVC = viewController as? UINavigationController {
+                    if let personsListVC = navigationVC.topViewController as? PersonsListViewController {
+                    personsListVC.person = person }
+                
+                    else if let fullPersonsListVC = navigationVC.topViewController as? FullPersonsListViewController {
+                        fullPersonsListVC.person = person
+                    }
                 
                 
                 

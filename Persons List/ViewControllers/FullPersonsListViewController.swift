@@ -9,6 +9,9 @@ import UIKit
 
 class FullPersonsListViewController: UITableViewController {
 
+    
+    var person:[Person]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -17,11 +17,11 @@ struct Person {
     static func getPersons() -> [Person] {
         let data = DataManager()
         var persons: [Person] = []
+        guard data.names.count == data.surnames.count &&
+                data.names.count == data.phones.count &&
+                data.names.count == data.emails.count else { return []}
+        
         for _ in data.names{
-            guard data.names.count == data.surnames.count &&
-                    data.names.count == data.phones.count &&
-                    data.names.count == data.emails.count else { return []}
-            
             persons.append(Person(name: data.names.randomElement() ?? "name", surname: data.surnames.randomElement() ?? "surname", phoneNumber: data.phones.randomElement() ?? "79991114455" , email: data.emails.randomElement() ?? "new@mail.ru"))
             
         }
