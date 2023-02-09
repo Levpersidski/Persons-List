@@ -10,18 +10,31 @@ import UIKit
 class PersonsTabBarController: UITabBarController {
 
     private let person = Person.getPersons()
-    
+
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      //в этом классе создаем единственный массив со списком контактов для того что бы список был единым на обоих экранах
-        //Создав массив в этом классе мы его передаем на оба экрана перебирая массив вью контроллеров мы передаем в эти вью контроллеры массив со списком контактов
+     
+        
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            guard let tabBarController = segue.destination as? UITabBarController else {return}
+            guard let viewControllers = tabBarController.viewControllers else {return}
+            
+            for viewController in viewControllers {
+                if let personsListVC = viewController as? PersonsListViewController {
+                    personsListVC.person = person
+                
+                
+                
+            }
     }
     
 
   
 
+}
+}
 }

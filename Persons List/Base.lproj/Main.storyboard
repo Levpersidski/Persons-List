@@ -72,7 +72,7 @@
         <!--Full Persons list-->
         <scene sceneID="DCG-d8-Gw6">
             <objects>
-                <tableViewController id="9D8-Bc-w4T" customClass="FullContactListViewController" customModule="Persons_List" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="9D8-Bc-w4T" customClass="FullPersonsListViewController" customModule="Persons_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="wr0-T9-GES">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

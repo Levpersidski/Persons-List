@@ -1,5 +1,5 @@
 //
-//  FullContactListViewController.swift
+//  FullPersonsListViewController.swift
 //  Persons List
 //
 //  Created by Роман Бакаев on 07.02.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FullContactListViewController: UITableViewController {
+class FullPersonsListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

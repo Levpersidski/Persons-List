@@ -16,8 +16,8 @@ struct Person {
     
     static func getPersons() -> [Person] {
         let data = DataManager()
-        var persons: [Person]
-        for person in data.names{
+        var persons: [Person] = []
+        for _ in data.names{
             guard data.names.count == data.surnames.count &&
                     data.names.count == data.phones.count &&
                     data.names.count == data.emails.count else { return []}
