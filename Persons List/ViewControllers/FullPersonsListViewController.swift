@@ -10,12 +10,11 @@ import UIKit
 class FullPersonsListViewController: UITableViewController {
 
     
-    var person:[Person]!
+    var personList:[Person]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
+        tableView.rowHeight = 50        // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -25,20 +24,36 @@ class FullPersonsListViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        9
+        personList.count
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         2
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        let section = self.personList[section]
+        return section.fullName
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FullList", for: indexPath)
 
-        // Configure the cell...
+        var content = cell.defaultContentConfiguration()
+        let person = personList [indexPath.row]
+        if indexPath.row == 0 {
+            content.text = person.phoneNumber
+        } else if indexPath.section == 1  {
+                content.text = person.email
+            }
+    
+        cell.contentConfiguration = content
 
         return cell
+
     }
     
 
