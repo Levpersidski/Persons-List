@@ -12,26 +12,17 @@ class ContactInfoViewController: UIViewController {
     @IBOutlet var emailLabel: UILabel!
     @IBOutlet var phoneNumberLable: UILabel!
     
+    @IBOutlet var personPhotoImage: UIImageView!
     var personList:Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        personPhotoImage.layer.cornerRadius = 20
+        
         emailLabel.text = personList.email
         phoneNumberLable.text = personList.phoneNumber
+        personPhotoImage.image = UIImage(named: personList.name)
+        
     }
     
-
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

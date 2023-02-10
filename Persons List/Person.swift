@@ -14,7 +14,7 @@ struct Person {
     var email: String
     
     var fullName: String {
-       "\(name) \(surname)"
+        "\(name) \(surname)"
     }
     
     static func getPersons() -> [Person] {
@@ -25,10 +25,13 @@ struct Person {
                 data.names.count == data.emails.count else { return []}
         
         for _ in data.names{
-            persons.append(Person(name: data.names.randomElement() ?? "name", surname: data.surnames.randomElement() ?? "surname", phoneNumber: data.phones.randomElement() ?? "79991114455" , email: data.emails.randomElement() ?? "new@mail.ru"))
+            
+            persons.append(Person(name: data.names.popLast() ?? "", surname: data.surnames.popLast() ?? "", phoneNumber: data.phones.popLast() ?? "" , email: data.emails.popLast() ?? ""))
             
         }
+        persons.shuffle()
         return persons
+        
     }
     
 }

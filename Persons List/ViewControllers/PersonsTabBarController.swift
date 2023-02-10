@@ -12,15 +12,12 @@ class PersonsTabBarController: UITabBarController {
     private let person = Person.getPersons()
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         sendPersonList()
         
     }
-    
     
     func sendPersonList() {
         guard let viewControllers = viewControllers else {return}

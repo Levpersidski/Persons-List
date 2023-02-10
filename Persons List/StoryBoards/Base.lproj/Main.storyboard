@@ -64,29 +64,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="dRP-FQ-mNl">
-                                <rect key="frame" x="20" y="160" width="69" height="89"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="4Th-be-aSC">
+                                <rect key="frame" x="20" y="160" width="374" height="375"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KgW-Ao-3QJ">
+                                        <rect key="frame" x="67" y="0.0" width="240" height="213"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP3-Nu-oBO">
-                                        <rect key="frame" x="0.0" y="0.0" width="69" height="35"/>
+                                        <rect key="frame" x="152.5" y="259" width="69" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNt-jN-qUt">
-                                        <rect key="frame" x="0.0" y="54" width="69" height="35"/>
+                                        <rect key="frame" x="152.5" y="340" width="69" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="wBF-fv-1ZK"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M79-GB-0ZV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dRP-FQ-mNl" firstAttribute="leading" secondItem="M79-GB-0ZV" secondAttribute="leading" constant="20" id="3uM-VX-SX2"/>
-                            <constraint firstItem="dRP-FQ-mNl" firstAttribute="top" secondItem="M79-GB-0ZV" secondAttribute="top" constant="20" id="sio-Sa-3qa"/>
+                            <constraint firstItem="M79-GB-0ZV" firstAttribute="trailing" secondItem="4Th-be-aSC" secondAttribute="trailing" constant="20" id="TZ5-nc-SX2"/>
+                            <constraint firstItem="4Th-be-aSC" firstAttribute="top" secondItem="M79-GB-0ZV" secondAttribute="top" constant="20" id="gVH-dM-gve"/>
+                            <constraint firstItem="4Th-be-aSC" firstAttribute="leading" secondItem="M79-GB-0ZV" secondAttribute="leading" constant="20" id="wpl-fP-hm8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Pr4-v6-7kj">
@@ -94,6 +101,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="emailLabel" destination="MNt-jN-qUt" id="DIB-bh-7Ga"/>
+                        <outlet property="personPhotoImage" destination="KgW-Ao-3QJ" id="uaN-fO-GOK"/>
                         <outlet property="phoneNumberLable" destination="lP3-Nu-oBO" id="Ybo-T0-wfv"/>
                     </connections>
                 </viewController>
