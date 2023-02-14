@@ -17,7 +17,6 @@ class ContactInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        personPhotoImage.layer.cornerRadius = 20
         
         emailLabel.text = personList.email
         phoneNumberLable.text = personList.phoneNumber

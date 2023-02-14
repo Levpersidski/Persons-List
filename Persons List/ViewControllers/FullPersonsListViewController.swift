@@ -46,8 +46,10 @@ class FullPersonsListViewController: UITableViewController {
         let person = personList [indexPath.section]
         if indexPath.row == 0 {
             content.text = person.phoneNumber
+            content.image = UIImage(systemName: Contacts.phone.rawValue)
         } else if indexPath.row == 1  {
             content.text = person.email
+            content.image = UIImage(systemName: Contacts.email.rawValue)
         }
         
         cell.contentConfiguration = content

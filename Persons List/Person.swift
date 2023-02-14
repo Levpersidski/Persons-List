@@ -5,33 +5,48 @@
 //  Created by Роман Бакаев on 06.02.2023.
 //
 
-import UIKit
+import Foundation
 
 struct Person {
-    var name: String
-    var surname: String
-    var phoneNumber: String
-    var email: String
+    
+    let name: String
+    let surname: String
+    let email: String
+    let phoneNumber: String
     
     var fullName: String {
         "\(name) \(surname)"
     }
-    
-    static func getPersons() -> [Person] {
-        let data = DataManager()
+}
+
+extension Person {
+    static func getContactList() -> [Person] {
+        
         var persons: [Person] = []
-        guard data.names.count == data.surnames.count &&
-                data.names.count == data.phones.count &&
-                data.names.count == data.emails.count else { return []}
         
-        for _ in data.names{
+        let names = DataManager.shared.names.shuffled()
+        let surnames = DataManager.shared.surnames.shuffled()
+        let emails = DataManager.shared.emails.shuffled()
+        let phones = DataManager.shared.phones.shuffled()
+        
+        let iterationCount = min(names.count, surnames.count, emails.count, phones.count)
+        
+        for index in 0..<iterationCount {
+            let person = Person(
+                name: names[index],
+                surname: surnames[index],
+                email: emails[index],
+                phoneNumber: phones[index]
+            )
             
-            persons.append(Person(name: data.names.popLast() ?? "", surname: data.surnames.popLast() ?? "", phoneNumber: data.phones.popLast() ?? "" , email: data.emails.popLast() ?? ""))
-            
+            persons.append(person)
         }
-        persons.shuffle()
-        return persons
         
+        return persons
     }
-    
+}
+
+enum Contacts: String {
+    case phone = "phone"
+    case email = "tray"
 }

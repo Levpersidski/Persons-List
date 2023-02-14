@@ -9,7 +9,7 @@ import UIKit
 
 class PersonsTabBarController: UITabBarController {
     
-    private let person = Person.getPersons()
+    private let person = Person.getContactList()
     
     
     override func viewDidLoad() {
@@ -20,25 +20,14 @@ class PersonsTabBarController: UITabBarController {
     }
     
     func sendPersonList() {
-        guard let viewControllers = viewControllers else {return}
-        
-        for viewController in viewControllers {
-            if let navigationVC = viewController as? UINavigationController {
-                if let personsListVC = navigationVC.topViewController as? PersonsListViewController {
+     
+    
+        guard let personsListVC = viewControllers?.first as? PersonsListViewController else {return}
+        guard let fullPersonsListVC = viewControllers?.last as? FullPersonsListViewController else {return}
                     personsListVC.personList = person
-                    
-                }
-                
-                else if let fullPersonsListVC = navigationVC.topViewController as? FullPersonsListViewController {
-                    fullPersonsListVC.personList = person
-                    
+            fullPersonsListVC.personList = person
+
                 }
                 
             }
-            
-            
-            
-            
-        }
-    }
-}
+
